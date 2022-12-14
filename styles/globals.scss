@@ -27,3 +27,8 @@ body {
   margin: 0 auto;
   max-width: $layout-breakpoint-large;
 }
+
+::selection {
+  background: rgba($orange, 0.7);
+  color: $background;
+}

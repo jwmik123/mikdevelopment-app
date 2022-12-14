@@ -17,21 +17,24 @@ export default function Home() {
   }, [loading]);
 
   return (
-    <AnimateSharedLayout type="crossfade">
-      <AnimatePresence>
-        {loading ? (
-          <motion.div key="loader">
-            <Loader setLoading={setLoading} />
-          </motion.div>
-        ) : (
-          <div className="container">
-            <Header />
-            <Banner />
-            <Projects />
-            <About />
-          </div>
-        )}
-      </AnimatePresence>
-    </AnimateSharedLayout>
+    <>
+      <Cursor />
+      <AnimateSharedLayout type="crossfade">
+        <AnimatePresence>
+          {loading ? (
+            <motion.div key="loader">
+              <Loader setLoading={setLoading} />
+            </motion.div>
+          ) : (
+            <div className="container">
+              <Header />
+              <Banner />
+              <Projects />
+              <About />
+            </div>
+          )}
+        </AnimatePresence>
+      </AnimateSharedLayout>
+    </>
   );
 }

@@ -55,6 +55,7 @@
   align-items: center;
   background: $black;
   width: 50vw;
+  z-index: 0;
   min-height: 200px;
   top: calc(50% - 100px);
   left: calc(50% - 25vw);
